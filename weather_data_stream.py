@@ -87,27 +87,29 @@ MAX_CALLS_PER_MINUTE = 30
 
 @sleep_and_retry
 @limits(calls=MAX_CALLS_PER_MINUTE, period=ONE_MINUTE)
-def update_pipeline(count = 0):
-    #outpath = os.getcwd()
-    key_path = "/Users/jnapolitano/Projects/pmc-submission/jupyter-book/notebooks/weather_key.txt"
-    lat = 34.047470
-    long = -118.445950
-    key = get_key(key_path)
-    base_url = "https://api.openweathermap.org/data/2.5/weather"
-    query_string = make_query_string(base_url,lat,long,key)
-    #pprint(query_string)
-    response = make_request(query_string=query_string)
-    response_dict = make_dict_from_response(response=response)
-    response_dict = add_date_stamp(response_dict)
-    update_str = make_update_string(response_dict)
-    big_query_response = make_request(update_str)
-    pprint(big_query_response)
-    pprint(update_str)
-    pprint(count)
-
-    with PoolExecutor(max_workers=3) as executor:
-        for _ in executor.map(update_pipeline, range(60)):
-            pass 
+def update_pipeline(i = 0):
+    while i<=1000000:
+        #outpath = os.getcwd()
+        key_path = "weather_key.txt"
+        lat = 34.047470
+        long = -118.445950
+        key = get_key(key_path)
+        base_url = "https://api.openweathermap.org/data/2.5/weather"
+        query_string = make_query_string(base_url,lat,long,key)
+        #pprint(query_string)
+        response = make_request(query_string=query_string)
+        response_dict = make_dict_from_response(response=response)
+        response_dict = add_date_stamp(response_dict)
+        update_str = make_update_string(response_dict)
+        big_query_response = make_request(update_str)
+        pprint(big_query_response)
+        pprint(update_str)
+        pprint(i)
+        i = i+1
+        time.sleep(10)
+    #with PoolExecutor(max_workers=4) as executor:
+    #    for _ in executor.map(update_pipeline, range(200)):
+    #        pass 
 
     
 def main():
