@@ -60,7 +60,7 @@ def make_update_string(response_dict):
     city_name = city_name.replace(",", "-")
 
 
-    base_url = "http://0.0.0.0:8080/weather?"
+    base_url = "http://10.132.66.195:8080/weather?"
     lat_str = "lat={}".format(str(latitude))
     long_str = "long={}".format(str(longitude))
     temp_str = "temp={}".format(str(temp))
