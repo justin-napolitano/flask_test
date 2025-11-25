@@ -1,27 +1,32 @@
 ---
 slug: github-flask-test
 id: github-flask-test
-title: Flask RESTful API for Weather Data Ingestion
+title: Flask RESTful API for Weather Data Management
 repo: justin-napolitano/flask_test
 githubUrl: https://github.com/justin-napolitano/flask_test
 generatedAt: '2025-11-24T21:34:47.034Z'
 source: github-auto
 summary: >-
-  A minimal Flask-based API service for ingesting and updating weather data with
-  Docker support and data processing using pandas.
+  Explore a minimal Flask-based API for ingesting and updating weather data,
+  featuring Docker support and data processing with pandas.
 tags:
   - flask
   - rest api
   - docker
   - pandas
   - google cloud bigquery
+  - python
+  - gunicorn
+  - weather data
+  - bigquery
 seoPrimaryKeyword: flask weather data api
 seoSecondaryKeywords:
-  - flask api example
-  - dockerized flask application
-  - weather data processing
-  - python flask tutorial
-  - data streaming with python
+  - flask rest api example
+  - dockerize flask app
+  - weather data ingestion
+  - pandas data processing
+  - gunicorn deployment
+  - google cloud bigquery integration
 seoOptimized: true
 topicFamily: null
 topicFamilyConfidence: null
