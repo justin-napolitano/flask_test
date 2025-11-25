@@ -7,8 +7,8 @@ githubUrl: https://github.com/justin-napolitano/flask_test
 generatedAt: '2025-11-24T21:34:47.034Z'
 source: github-auto
 summary: >-
-  Explore a minimal Flask-based API for ingesting and updating weather data,
-  featuring Docker support and data processing with pandas.
+  Explore a minimal Flask-based API for ingesting and updating weather data, featuring Docker
+  support and data processing with pandas.
 tags:
   - flask
   - rest api
@@ -28,8 +28,8 @@ seoSecondaryKeywords:
   - gunicorn deployment
   - google cloud bigquery integration
 seoOptimized: true
-topicFamily: null
-topicFamilyConfidence: null
+topicFamily: datascience
+topicFamilyConfidence: 0.9
 kind: project
 entryLayout: project
 showInProjects: true
@@ -125,3 +125,4 @@ The API will be available at `http://localhost:8080/weather`.
 ---
 
 *Note: Some functionality and integration details are inferred based on partial code snippets and imports.*
+
